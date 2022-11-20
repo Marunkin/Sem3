@@ -38,17 +38,28 @@ else
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-/*
+//1 вариант
+
 Console.WriteLine("Введите число: ");
 int number = int.Parse(Console.ReadLine()!);
 int n = 1;
 
-while (n <= number)
+while (n <= Math.Abs(number))
     {
         Console.Write($"{(n*n*n)} ");
         n++;
     }
 
+
+//2 вариант
+/*
+Console.WriteLine("Введите число: ");
+int number = int.Parse(Console.ReadLine()!);
+
+for (int n = 1; n <= Math.Abs(number); n++)
+    {
+        Console.Write($"{Math.Pow(n,3)} ");
+    }
 */
 
 // Задача 21
@@ -56,6 +67,7 @@ while (n <= number)
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
+/*
 Console.Write("Введите координату точки A: x1 = ");
 int x1 = int.Parse(Console.ReadLine()!);
 Console.Write("Введите координату точки A: y1 = ");
@@ -74,3 +86,4 @@ double distance = Math.Pow((x2-x1),2)+Math.Pow((y2-y1),2)+Math.Pow((z2-z1),2);
 distance = Math.Sqrt(distance);
 
 Console.WriteLine($"Расстояние между точками: {Math.Round(distance,2)}");
+*/
